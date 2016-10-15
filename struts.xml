@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+<constant name="struts.i18n.encoding" value="utf-8" />
+   <package name="library" extends="struts-default">
+    <!-- 主页 -->
+     <action name = "index" class="Library.Book">
+     	<result name = "success">/index.jsp</result>
+     </action>
+   	<action name="AddAuthor" class="AddAuthor">
+       		<result name="Success">/QueryInfo.jsp</result>
+   	</action>
+   	<action name="getDetail" class="QueryBooks">
+   	    		<result name="Success">/QueryBooks.jsp</result>
+       	</action>
+       	<action name="delete" class="Delete">
+       		<result name="Success">/QueryInfo.jsp</result>
+       	</action>
+       
+       	<action name="update" class="BookUpdate">
+       		<result name="Success">/QueryInfo.jsp</result>
+       	</action>
+    </package>
+</struts>
